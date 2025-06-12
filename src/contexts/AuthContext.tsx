@@ -10,7 +10,7 @@ interface User {
 
 interface AuthContextType {
   user: User | null;
-  4loading: boolean;
+  loading: boolean;
   signIn: (email: string, password: string) => Promise<{ error: any }>;
   signOut: () => Promise<void>;
   isAuthenticated: boolean;
@@ -31,11 +31,11 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-  4const [user, setUser] = useState<User | null>(null);
-  4const [loading, setLoading] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(false);
 
   // Connexion simplifiée
-  4const signIn = async (email: string, password: string) => {
+  const signIn = async (email: string, password: string) => {
     setLoading(true);
     
     // Simulation de connexion
@@ -60,7 +60,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setUser(null);
   };
 
-  4const value: AuthContextType = {
+  const value: AuthContextType = {
     user,
     loading,
     signIn,
