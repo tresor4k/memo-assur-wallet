@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Upload, Scan, Smartphone, Shield, Zap, ArrowRight } from 'lucide-react';
 
 export default function Home() {
-  4const [isScanning, setIsScanning] = useState(false);
+  const [isScanning, setIsScanning] = useState(false);
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -14,7 +14,7 @@ export default function Home() {
       // Simulation du scan
       setTimeout(() => {
         setIsScanning(false);
-        alert('★️ Scan réussi ! Fonctionnalité complète à venir');
+        alert('★򟏿 Scan reussi ! Fonctionnalite complete a venir');
       }, 3000);
     }
   };
@@ -30,11 +30,11 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="mb-16"
           >
-            <h1> className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Mémo-Assur <span className="text-accent-400">Wallet</span>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Memo-Assur <span className="text-accent-400">Wallet</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-4xl mx-auto">
-              La première app universelle qui transforme vos mémos d'assurance en passes Apple/Google Wallet en 10 secondes
+              La premiere app universelle qui transforme vos memos d'assurance en passes Apple/Google Wallet en 10 secondes
             </p>
           </motion.div>
 
@@ -75,13 +75,13 @@ export default function Home() {
                   
                   <div>
                     <h3 className="text-3xl font-bold text-white mb-4">
-                      {isScanning ? 'Analyse en cours...' : 'Glissez votre mémo ici'}
+                      {isScanning ? 'Analyse en cours...' : 'Glissez votre memo ici'}
                     </h3>
                     <p className="text-white/70 text-xl">
-                      {isScanning ? 'Extraction des données d\'assurance' : 'ou cliquez pour sélectionner un fichier'}
+                      {isScanning ? 'Extraction des donnees d\'assurance' : 'ou cliquez pour selectionner un fichier'}
                     </p>
                     <p className="text-sm text-white/50 mt-4">
-                      PDF, JPG, PNG • Max 10MB
+                      PDF, JPG, PNG â€¢ Max 10MB
                     </p>
                   </div>
                 </div>
@@ -119,15 +119,15 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Pourquoi choisir <span className="text-accent-400">Mémo-Assur</span> ?
+              Pourquoi choisir <span className="text-accent-400">Memo-Assur</span> ?
             </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: <Zap className="w-8 h-8" />, title: "Instantané", description: "Scan PDF → Wallet en 10 secondes" },
-              { icon: <Shield className="w-8 h-8" />, title: "Universel", description: "Compatible avec tous les assureurs français" },
-              { icon: <Smartphone className="w-8 h-8" />, title: "Multi-plateforme", description: "Apple Wallet, Google Wallet et accès web" },
+              { icon: <Zap className="w-8 h-8" />, title: "Instantane", description: "Scan PDF â†’ Wallet en 10 secondes" },
+              { icon: <Shield className="w-8 h-8" />, title: "Universel", description: "Compatible avec tous les assureurs francais" },
+              { icon: <Smartphone className="w-8 h-8" />, title: "Multi-plateforme", description: "Apple Wallet, Google Wallet et acces web" },
             ].map((feature, index) => (
               <motion.div
                 key={index}
